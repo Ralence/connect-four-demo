@@ -3,7 +3,7 @@ import React from "react";
 import classes from "./Game.module.css";
 
 const BoardCell = props => {
-  const { columnIdx, rowIdx, cell, clicked } = props;
+  const { columnIdx, cell, clicked } = props;
 
   let circleColorClass = "";
 

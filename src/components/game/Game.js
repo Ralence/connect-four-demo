@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import GameBoard from "./GameBoard";
 import GameInfo from "./GameInfo";
-import gameSummary from "./GameSummary";
+import GameSummary from "./GameSummary";
 
-import { makeGrid, checkWinner, getBlankGrid } from "../../utils/helpers";
+import { makeGrid } from "../../utils/helpers";
 
 import classes from "./Game.module.css";
-import GameSummary from "./GameSummary";
 
 class Game extends Component {
   state = {
@@ -23,12 +22,6 @@ class Game extends Component {
   chkLine = (a, b, c, d) => {
     // Check first cell non-zero and all cells match
     return a !== 0 && a === b && a === c && a === d;
-  };
-
-  getBlankGrid = () => {
-    return Array(7)
-      .fill(null)
-      .map(() => Array(6).fill(0));
   };
 
   checkGameEnd = bd => {
