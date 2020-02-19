@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import GameBoard from "./GameBoard";
-import GameSummary from "./GameSummary";
+import GameInfo from "./GameInfo";
+import gameSummary from "./GameSummary";
 
 import { makeGrid, checkWinner, getBlankGrid } from "../../utils/helpers";
 
 import classes from "./Game.module.css";
+import GameSummary from "./GameSummary";
 
 class Game extends Component {
   state = {
@@ -91,15 +93,28 @@ class Game extends Component {
     });
   };
 
+  handleRestart = () => {
+    this.setState({
+      playerOneTurn: true,
+      board: makeGrid(7, 6),
+      moves: 0,
+      winner: null
+    });
+  };
+
   render() {
     console.log(this.state.winner);
     return (
       <main className={classes.Main}>
         {this.state.winner ? (
-          <p>Winer is player: {this.state.winner}</p>
+          <GameSummary
+            winner={this.state.winner}
+            moves={this.state.moves}
+            restart={this.handleRestart}
+          />
         ) : (
           <React.Fragment>
-            <GameSummary playingNow={this.state.playerOneTurn ? 1 : 2} />
+            <GameInfo playingNow={this.state.playerOneTurn ? 1 : 2} />
             <GameBoard
               winner={this.state.winner}
               checkWin={board => this.checkGameEnd(board)}
