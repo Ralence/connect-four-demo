@@ -4,7 +4,7 @@ import Game from "./components/game/Game";
 
 function App() {
   return (
-    <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
+    <div style={{ display: "flex", flexDirection: "column", minHeight: "100%" }}>
       <Header />
       <Game />
     </div>

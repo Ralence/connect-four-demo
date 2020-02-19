@@ -7,3 +7,37 @@
   justify-content: center;
   flex-grow: 1;
 }
+
+.Board {
+  display: flex;
+  background-color: aqua;
+}
+
+.Row {
+  background-color: blueviolet;
+  margin: 2px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.BoardCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+}
+
+.circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: aliceblue;
+}
+
+.red {
+  background-color: red;
+}
+.yellow {
+  background-color: yellow;
+}
