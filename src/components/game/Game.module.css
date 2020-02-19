@@ -1,0 +1,9 @@
+.Main {
+  width: 100%;
+  min-height: 100%;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
