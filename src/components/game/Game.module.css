@@ -3,6 +3,7 @@
   min-height: 100%;
   background-color: aliceblue;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-grow: 1;
@@ -10,14 +11,18 @@
 
 .Board {
   display: flex;
-  background-color: aqua;
+  flex-direction: column-reverse;
+  background-color: blueviolet;
+  padding: 5px;
+  margin: 20px;
 }
 
 .Row {
   background-color: blueviolet;
-  margin: 2px;
+  margin: 0;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
+  cursor: pointer;
 }
 
 .BoardCell {
@@ -40,4 +45,31 @@
 }
 .yellow {
   background-color: yellow;
+}
+.players {
+  display: flex;
+  justify-content: space-between;
+  width: 420px;
+}
+.player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+.redCircle {
+  display: flex;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: red;
+  margin: 5px;
+}
+.yellowCircle {
+  display: flex;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: yellow;
+  margin: 5px;
 }
