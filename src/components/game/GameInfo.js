@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./Game.module.css";
 
 const GameInfo = props => {
-  const { playingNow } = props;
+  const { playingNow, undo, moves } = props;
   return (
     <div>
       <div className={classes.players}>
@@ -25,6 +25,9 @@ const GameInfo = props => {
         </span>
       </div>
       <div></div>
+      <button type="button" onClick={undo} disabled={moves < 1}>
+        Undo
+      </button>
     </div>
   );
 };
